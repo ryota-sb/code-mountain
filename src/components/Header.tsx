@@ -9,8 +9,8 @@ export default function Header() {
   ];
   return (
     <div className="my-6 mx-8 flex items-center justify-between">
-      <h1 className="text-3xl text-white">Code Mountain</h1>
-      <ul className="flex gap-20 text-xl text-white">
+      <h1 className="text-3xl">Code Mountain</h1>
+      <ul className="flex gap-20 text-xl">
         {menus.map((menu) => (
           <Link href={menu.link}>{menu.name}</Link>
         ))}
