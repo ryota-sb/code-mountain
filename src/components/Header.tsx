@@ -8,14 +8,14 @@ export default function Header() {
     { name: "Contact", link: "/contact" },
   ];
   return (
-    <div className="my-6 mx-8 flex items-center justify-between">
+    <div className="flex items-center justify-around px-8 py-6">
       <h1 className="text-3xl">Code Mountain</h1>
       <ul className="flex gap-20 text-xl">
         {menus.map((menu) => (
           <Link href={menu.link}>{menu.name}</Link>
         ))}
       </ul>
-      <div></div>
+      <h1 className="text-3xl text-black">Code Mountain</h1>
     </div>
   );
 }
