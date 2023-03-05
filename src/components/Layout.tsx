@@ -9,9 +9,9 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="flex flex-col bg-black text-white">
+    <div>
       <Header />
-      {children}
+      <div className="flex-grow">{children}</div>
       <Footer />
     </div>
   );
