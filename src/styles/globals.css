@@ -15,4 +15,8 @@
   .border-blink {
     animation: blink 0.5s ease-in-out infinite alternate;
   }
+
+  .fancy-border-radius {
+    border-radius: 45% 55% 60% 40% / 40% 26% 74% 60%;
+  }
 }
