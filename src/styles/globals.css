@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 点滅 */
 @keyframes blink {
   0% {
     opacity: 0;
@@ -11,12 +12,98 @@
   }
 }
 
+/* 上からのフェードイン */
+@keyframes fadein-top {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 左からのフェードイン */
+@keyframes fadein-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes boundmove {
+  from {
+    right: 110px;
+  }
+  50% {
+    right: 90px;
+  }
+  to {
+    right: 110px;
+  }
+}
+
 @layer components {
+  /* 点滅する縦ボーダーライン */
   .border-blink {
     animation: blink 0.5s ease-in-out infinite alternate;
   }
 
+  /* 上からフェードイン */
+  .fadein-top {
+    opacity: 0;
+    animation: 1s ease-out 0.5s forwards fadein-top;
+  }
+
+  /* 左からフェードイン */
+  .fadein-left {
+    animation: fadein-left 1s ease-out forwards;
+  }
+
+  /* 特殊な円形 */
   .fancy-border-radius {
     border-radius: 45% 55% 60% 40% / 40% 26% 74% 60%;
+  }
+
+  /* アンダーライン */
+  .under-line::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: deepskyblue;
+    bottom: -7px;
+    left: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+  }
+  .under-line:hover::after {
+    width: 100%;
+  }
+
+  /* 右方向の矢印 */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    animation: boundmove 2s infinite;
+    height: 1px; /* 線の太さ */
+    width: 50px; /* 線の長さ */
+    background: white;
+  }
+  .arrow::before {
+    position: absolute;
+    content: "";
+    top: -4px; /* 位置調整 */
+    right: -2px; /* 位置調整 */
+    height: 1px; /* 線の太さ */
+    width: 15px; /* 線の長さ */
+    background: white;
+    transform: rotate(35deg); /* 線の角度 */
   }
 }
