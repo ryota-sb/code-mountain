@@ -31,7 +31,10 @@ const Product: NextPage = () => {
         </h1>
         <div className="grid grid-cols-2 gap-20">
           {products.map((product) => (
-            <div className="aspect-w-16 aspect-h-9 overflow-hidden opacity-70 duration-700 hover:opacity-30">
+            <div
+              key={product.name}
+              className="aspect-w-16 aspect-h-9 overflow-hidden opacity-70 duration-700 hover:opacity-30"
+            >
               <Image
                 src={product.img}
                 alt={product.name}
