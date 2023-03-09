@@ -36,6 +36,17 @@
   }
 }
 
+@keyframes fadein-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes boundmove {
   from {
     right: 110px;
@@ -63,6 +74,14 @@
   /* 左からフェードイン */
   .fadein-left {
     animation: fadein-left 1s ease-out forwards;
+  }
+
+  /* ホバー時にしたからフェードイン */
+  .fadein-bottom {
+    opacity: 0;
+  }
+  .fadein-bottom:hover {
+    animation: fadein-bottom 0.5s ease-out forwards;
   }
 
   /* 特殊な円形 */
