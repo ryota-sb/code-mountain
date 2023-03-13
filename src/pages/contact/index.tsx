@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 import { Montserrat } from "next/font/google";
+import React from "react";
 const roboto = Montserrat({ subsets: ["latin"], weight: "700" });
 
 const Contact: NextPage = () => {
@@ -22,8 +23,17 @@ const Contact: NextPage = () => {
     defaultValues: { name: "", email: "", message: "" },
   });
 
-  const onSubmit: SubmitHandler<ContactFormInput> = () => {
-    console.log("フォーム送信ボタンを押しました。");
+  const onSubmit: SubmitHandler<ContactFormInput> = async (data) => {
+    await fetch("api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) console.log("メールの送信が完了しました");
+    });
   };
   return (
     <Layout>
