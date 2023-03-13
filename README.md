@@ -6,3 +6,5 @@
 - TypeScript 4.9.5
 - React Hook Form 7.43.5
 - nodemailer 6.9.1
+
+#### 本番環境は、Vercel です。
