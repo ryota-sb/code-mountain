@@ -17,6 +17,7 @@ const Contact: NextPage = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<ContactFormInput>({
     mode: "onChange",
@@ -34,6 +35,7 @@ const Contact: NextPage = () => {
     }).then((res) => {
       if (res.status === 200) console.log("メールの送信が完了しました");
     });
+    reset();
   };
   return (
     <Layout>
@@ -52,6 +54,7 @@ const Contact: NextPage = () => {
                   <input
                     {...register("name", { required: true })}
                     className="rounded-3xl border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
+                    placeholder="例) 松井 亮太"
                   />
                   {errors.name && (
                     <h1 className="text-red-500">お名前を入力してください</h1>
@@ -62,6 +65,7 @@ const Contact: NextPage = () => {
                   <input
                     {...register("email", { required: true })}
                     className="rounded-3xl border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
+                    placeholder="例) code@example.com"
                   />
                   {errors.email && (
                     <h1 className="text-red-500">
