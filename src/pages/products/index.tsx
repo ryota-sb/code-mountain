@@ -9,7 +9,7 @@ import { Montserrat } from "next/font/google";
 const roboto = Montserrat({ subsets: ["latin"], weight: "700" });
 
 const Product: NextPage = () => {
-  const [isLoading, setLoading] = useState<boolean>(true);
+  const [isLoading, setLoading] = useState(true);
 
   const products = [
     {
@@ -27,13 +27,13 @@ const Product: NextPage = () => {
 
   return (
     <Layout>
-      <div className="mx-10 mt-20 flex min-h-screen flex-col gap-20">
+      <div className="mx-4 flex min-h-screen flex-col gap-10 md:mx-8 md:gap-14 lg:mx-10 lg:mt-20 lg:gap-20">
         <h1
-          className={`${roboto.className} fadein-left flex text-9xl tracking-wider text-gray-500 text-opacity-10`}
+          className={`${roboto.className} fadein-left flex justify-center text-7xl tracking-wider text-gray-500 text-opacity-10 md:text-8xl lg:justify-start lg:text-9xl`}
         >
           PRODUCTS
         </h1>
-        <div className="grid grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2 lg:gap-20">
           {products.map((product, index) => (
             <div
               key={index}
@@ -42,8 +42,7 @@ const Product: NextPage = () => {
               <Image
                 src={product.img}
                 alt={product.name}
-                width={500}
-                height={500}
+                fill
                 className={cn(
                   "bg-gray-200 object-contain duration-700 ease-in-out group-hover:opacity-40",
                   isLoading

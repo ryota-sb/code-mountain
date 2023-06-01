@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import { useEffect } from "react";
+
 export default function Header() {
   const router = useRouter();
 
@@ -19,8 +21,8 @@ export default function Header() {
 
   return (
     <div className="m-10 flex items-center justify-between">
-      <h1 className="text-3xl">Code Mountain</h1>
-      <ul className="flex gap-16 text-xl">
+      <h1 className="text-xl md:text-2xl lg:text-3xl">Code Mountain</h1>
+      <ul className="hidden gap-10 text-xl md:flex lg:gap-16">
         {menus.map((menu) => (
           <li key={menu.name} className="relative">
             <Link href={menu.link} className="under-line">
@@ -36,6 +38,7 @@ export default function Header() {
           </li>
         ))}
       </ul>
+      <div className="md:hidden">メニュー</div>
     </div>
   );
 }
