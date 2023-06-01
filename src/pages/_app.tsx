@@ -7,8 +7,8 @@ const raleway = Raleway({ subsets: ["latin"], weight: "200" });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={raleway.className}>
+    <main className={`${raleway.className} bg-[#111111] text-white`}>
       <Component {...pageProps} />
-    </div>
+    </main>
   );
 }

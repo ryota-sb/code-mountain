@@ -61,12 +61,12 @@ const TypingAnimation: React.FC = () => {
   }, [texts, currentIndex]);
 
   return (
-    <div>
-      <div className="flex min-h-screen items-center justify-center">
+    <>
+      <section className="flex min-h-screen items-center justify-center">
         <h1 className="ml-10 text-6xl">{displayText}</h1>
         <span className="border-blink ml-1 border-r-2 border-white"></span>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 

@@ -17,42 +17,51 @@ const About: NextPage = () => {
   };
 
   return (
-    <Layout>
-      <div className="mx-10 mt-20 flex min-h-screen flex-col gap-20">
-        <h1
-          className={`${roboto.className} fadein-left flex text-9xl tracking-wider text-gray-500 text-opacity-10`}
-        >
-          ABOUT
-        </h1>
-        <div className="flex items-center gap-40">
-          <Image
-            src="/images/ryota.jpg"
-            alt="Matsui Ryota"
-            width={400}
-            height={400}
-            className={cn(
-              "fancy-border-radius duration-700 ease-in-out group-hover:opacity-40",
-              isLoading
-                ? "scale-100 blur-2xl grayscale"
-                : "scale-100 blur-0 grayscale-0"
-            )}
-            onLoadingComplete={() => setLoading(false)}
-          />
-          <div className="fadein-top flex flex-col gap-6">
-            <h1 className="text-4xl">松井 亮太</h1>
-            <p>1994年12月6日生まれ</p>
-            <p>静岡県浜松市在住</p>
-            <p>趣味は、スノーボード、プログラミング、ゲームなどです。</p>
+    <main className="flex justify-center">
+      <Layout>
+        <section className="m-auto flex min-h-screen flex-col gap-10 md:mx-8 md:gap-14 lg:mx-10 lg:mt-20 lg:gap-20">
+          <h1
+            className={`${roboto.className} fadein-left flex justify-center text-6xl tracking-wider text-gray-500 text-opacity-10 sm:text-7xl md:text-8xl lg:justify-start lg:text-9xl`}
+          >
+            ABOUT
+          </h1>
+          <div className="relative flex flex-col items-center gap-10 lg:flex-row lg:gap-40">
+            <div
+              className={cn(
+                "w-64 duration-700 ease-in-out group-hover:opacity-40",
+                isLoading
+                  ? "scale-100 blur-2xl grayscale"
+                  : "scale-100 blur-0 grayscale-0"
+              )}
+            >
+              <Image
+                src="/images/ryota.jpg"
+                alt="Matsui Ryota"
+                width={400}
+                height={400}
+                className="fancy-border-radius"
+                onLoadingComplete={() => setLoading(false)}
+              />
+            </div>
+
+            <div className="fadein-top flex flex-col gap-6 text-center md:text-start">
+              <h2 className="text-3xl md:text-4xl">松井 亮太</h2>
+              <p>1994年12月6日生まれ</p>
+              <p>静岡県浜松市在住</p>
+              <p>趣味は、スノーボード、プログラミング、ゲームなどです。</p>
+            </div>
           </div>
-        </div>
-        <div className="fadein-top relative flex justify-end">
-          <div className="arrow"></div>
-          <button>
-            <Link href="/about/details">Read more</Link>
-          </button>
-        </div>
-      </div>
-    </Layout>
+          <div className="flex justify-center md:justify-start">
+            <div className="fadein-top relative left-10 flex justify-end">
+              <span className="arrow" />
+              <button>
+                <Link href="/about/details">Read more</Link>
+              </button>
+            </div>
+          </div>
+        </section>
+      </Layout>
+    </main>
   );
 };
 

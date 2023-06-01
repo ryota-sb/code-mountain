@@ -18,8 +18,8 @@ export default function Header() {
   };
 
   return (
-    <header className="m-10 flex items-center justify-between">
-      <title className="text-xl md:text-2xl lg:text-3xl">Code Mountain</title>
+    <header className="flex items-center justify-between p-8">
+      <h1 className="text-xl md:text-2xl lg:text-3xl">Code Mountain</h1>
       <nav className="hidden gap-10 text-xl md:flex lg:gap-16">
         {menus.map((menu) => (
           <div key={menu.name} className="relative">

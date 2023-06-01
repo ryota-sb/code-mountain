@@ -6,7 +6,7 @@ import TypingAnimation from "components/TypingAnimation";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Code Mountain</title>
         <meta
@@ -16,10 +16,12 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <TypingAnimation />
-      </Layout>
-    </div>
+      <main className="flex justify-center">
+        <Layout>
+          <TypingAnimation />
+        </Layout>
+      </main>
+    </>
   );
 };
 
