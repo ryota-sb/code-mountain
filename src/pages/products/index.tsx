@@ -38,18 +38,18 @@ const Product: NextPage = () => {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="aspect-w-16 aspect-h-9 overflow-hidden opacity-80 duration-700"
+                className={cn(
+                  "aspect-w-16 aspect-h-9 overflow-hidden bg-gray-200 opacity-80 duration-700 ease-in-out group-hover:opacity-40",
+                  isLoading
+                    ? "scale-100 blur-2xl grayscale"
+                    : "scale-100 blur-0 grayscale-0"
+                )}
               >
                 <Image
                   src={product.img}
                   alt={product.name}
                   fill
-                  className={cn(
-                    "bg-gray-200 object-contain duration-700 ease-in-out group-hover:opacity-40",
-                    isLoading
-                      ? "scale-100 blur-2xl grayscale"
-                      : "scale-100 blur-0 grayscale-0"
-                  )}
+                  className="object-cover"
                   onLoadingComplete={() => setLoading(false)}
                 />
                 <div className="fadein-bottom z-10 flex flex-col items-center justify-center text-black backdrop-blur-sm">
