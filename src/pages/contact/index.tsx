@@ -49,12 +49,12 @@ const Contact: NextPage = () => {
           <div className="h-full rounded-3xl p-10">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-col gap-10">
-                <div className="grid grid-cols-2 gap-20">
+                <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
                   <div className="flex flex-col gap-y-3">
                     <label>お名前</label>
                     <input
                       {...register("name", { required: true })}
-                      className="rounded-3xl border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
+                      className="border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
                       placeholder="例) 松井 亮太"
                     />
                     {errors.name && (
@@ -65,7 +65,7 @@ const Contact: NextPage = () => {
                     <label>メールアドレス</label>
                     <input
                       {...register("email", { required: true })}
-                      className="rounded-3xl border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
+                      className="border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
                       placeholder="例) code@example.com"
                     />
                     {errors.email && (
@@ -79,7 +79,7 @@ const Contact: NextPage = () => {
                   <label>メッセージ内容</label>
                   <textarea
                     {...register("message", { required: true })}
-                    className="h-96 rounded-3xl border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
+                    className="h-96 border border-white bg-gray-500 bg-opacity-0 py-2 px-4"
                     placeholder="メッセージを記入してください。"
                   />
                   {errors.message && (
@@ -92,7 +92,7 @@ const Contact: NextPage = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="my-4 h-14 w-14 cursor-pointer rounded-full bg-gray-500 bg-opacity-10 hover:scale-110 hover:duration-500"
+                  className="my-4 h-14 w-14 cursor-pointer rounded-md bg-gray-500 bg-opacity-10 hover:scale-110 hover:duration-500"
                 >
                   <FontAwesomeIcon icon={faPaperPlane} />
                 </button>
