@@ -76,7 +76,7 @@ export default function Header() {
       <div className="md:hidden">
         <button onClick={handleClick}>
           <span
-            className={`block h-0.5 w-6 -translate-y-0.5 rounded-sm bg-white transition-all duration-300 ease-out ${
+            className={`block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out ${
               isOpen ? "translate-y-1 rotate-45" : "-translate-y-0.5"
             }`}
           ></span>
@@ -86,7 +86,7 @@ export default function Header() {
             }`}
           ></span>
           <span
-            className={`block h-0.5 w-6 translate-y-0.5 rounded-sm bg-white transition-all duration-300 ease-out ${
+            className={`block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out ${
               isOpen ? "-translate-y-1 -rotate-45" : "translate-y-0.5"
             }`}
           ></span>
