@@ -6,10 +6,14 @@ const TypingAnimation: React.FC = () => {
   return (
     <>
       <section
-        className="flex min-h-screen flex-col items-center justify-center"
-        style={{ height: "100dvh" }}
+        className="flex flex-col items-center justify-center"
+        style={{ height: `calc(100dvh - 92px)` }}
       >
-        <h1 className="text-2xl">Welcome to Code Mountain.</h1>
+        <h1 className="mb-2 text-5xl md:text-7xl">
+          Welcome to&ensp;
+          <br className="md:hidden" />
+          Code Mountain.
+        </h1>
         <div className="flex text-2xl">
           <h2>
             My site uses
