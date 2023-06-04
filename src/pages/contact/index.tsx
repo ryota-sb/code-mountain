@@ -46,7 +46,7 @@ const Contact: NextPage = () => {
           >
             CANTACT
           </h1>
-          <div className="p-6">
+          <div className="fadein-top p-4">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-col gap-10">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
