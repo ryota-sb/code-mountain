@@ -46,10 +46,10 @@ const Contact: NextPage = () => {
           >
             CANTACT
           </h1>
-          <div className="h-full rounded-3xl p-10">
+          <div className="p-6">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-col gap-10">
-                <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
                   <div className="flex flex-col gap-y-3">
                     <label>お名前</label>
                     <input
