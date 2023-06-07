@@ -15,6 +15,7 @@
     "title": "Ally",
     "subTitle": "ゲームマッチングアプリ",
     "image": "/images/woman.webp",
+    "images": ["/images/products/code_atelier.png", "/images/woman.webp"],
     "description": "ゲームを一緒にプレイする友達を探すアプリです。フロントエンドはNext.jsで、バックエンドはRuby on RailsのAPIモードを採用しています。",
     "features": [
       "ログイン機能",
@@ -30,6 +31,7 @@
     "title": "Spotify GP",
     "subTitle": "",
     "image": "/images/woman.webp",
+    "images": ["/images/products/code_atelier.png", "/images/woman.webp"],
     "description": "詳細3",
     "features": ["セッション認証"],
     "skills": ["T3 Stack", "Neon"],
