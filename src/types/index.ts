@@ -13,4 +13,5 @@ export type ProductObject = {
   description: string;
   features: string[];
   skills: string[];
+  githubSrc: string;
 };
