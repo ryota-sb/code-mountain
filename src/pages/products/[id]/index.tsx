@@ -1,21 +1,30 @@
-import { NextPage } from "next";
-
-import { Montserrat } from "next/font/google";
-const roboto = Montserrat({ subsets: ["latin"], weight: "700" });
-
 // types
 import type {
+  NextPage,
   GetStaticPaths,
   GetStaticProps,
   GetStaticPropsContext,
 } from "next";
 import type { ProductObject } from "types";
 
+// Font
+import { Montserrat } from "next/font/google";
+const roboto = Montserrat({ subsets: ["latin"], weight: "700" });
+
+// Components
 import Layout from "components/Layout";
 import SplideImage from "components/SplideImage";
 
 // product data
 import data from "data/data.json";
+
+// Font Awesome Icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+// Framer Motion
+import { motion } from "framer-motion";
 
 type Props = { product: ProductObject };
 
@@ -31,7 +40,6 @@ export const getStaticProps: GetStaticProps = async (
     },
   };
 };
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = data.map((product) => ({
     params: { id: product.id.toString() },
@@ -44,6 +52,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const Product: NextPage<Props> = ({ product }: Props) => {
+  // 改行コードを</br>タグに置き換えて取得
   const replaceDescription = product.description.replace(/\n/g, "</br>");
 
   return (
@@ -55,7 +64,21 @@ const Product: NextPage<Props> = ({ product }: Props) => {
           >
             {product.title}
           </h1>
-          <h2 className="mb-4">{product.subTitle}</h2>
+          <div className="mb-4 flex items-center justify-between">
+            <h2>{product.subTitle}</h2>
+            <motion.button
+              whileHover={{ scale: 0.8 }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <a
+                href={product.githubSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub as IconDefinition} size="2xl" />
+              </a>
+            </motion.button>
+          </div>
 
           <div className="flex flex-col gap-10">
             <SplideImage images={product.images} title={product.title} />
