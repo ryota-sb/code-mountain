@@ -9,6 +9,8 @@ export type ProductObject = {
   title: string;
   subTitle: string;
   image: string;
+  images: string[];
   description: string;
+  features: string[];
   skills: string[];
 };
