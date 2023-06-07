@@ -1,5 +1,7 @@
-import Image from "next/image";
 import { NextPage } from "next";
+
+import { Montserrat } from "next/font/google";
+const roboto = Montserrat({ subsets: ["latin"], weight: "700" });
 
 // types
 import type {
@@ -9,10 +11,8 @@ import type {
 } from "next";
 import type { ProductObject } from "types";
 
-import { Montserrat } from "next/font/google";
-const roboto = Montserrat({ subsets: ["latin"], weight: "700" });
-
 import Layout from "components/Layout";
+import SplideImage from "components/SplideImage";
 
 // product data
 import data from "data/data.json";
@@ -58,22 +58,15 @@ const Product: NextPage<Props> = ({ product }: Props) => {
           <h2 className="mb-4">{product.subTitle}</h2>
 
           <div className="flex flex-col gap-10">
-            <div className="aspect-w-16 aspect-h-9 bg-white opacity-80">
-              <Image
-                src={product.image!}
-                alt={product.title}
-                fill
-                className="object-contain"
-              />
-            </div>
+            <SplideImage images={product.images} title={product.title} />
 
             <div className="fadein-top flex flex-col gap-3">
               <h2 className="border-l-2 border-white pl-2 text-2xl">
                 使用技術
               </h2>
               <div className="flex gap-4">
-                {product.skills?.map((skill) => (
-                  <ul key={product.id}>
+                {product.skills.map((skill, index) => (
+                  <ul key={index}>
                     <li>{skill}</li>
                   </ul>
                 ))}
@@ -85,7 +78,14 @@ const Product: NextPage<Props> = ({ product }: Props) => {
               <p dangerouslySetInnerHTML={{ __html: replaceDescription }} />
             </div>
 
-            <div></div>
+            <div className="fadein-top flex flex-col gap-3">
+              <h2 className="border-l-2 border-white pl-2 text-2xl">機能</h2>
+              {product.features.map((feature, index) => (
+                <ul key={index} className="ml-4 list-disc">
+                  <li>{feature}</li>
+                </ul>
+              ))}
+            </div>
           </div>
         </section>
       </Layout>
