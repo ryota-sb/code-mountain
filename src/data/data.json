@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Code Atelier",
+    "subTitle": "技術ブログサイト",
+    "image": "/images/products/code_atelier.png",
+    "images": ["/images/products/code_atelier.png", "/images/woman.webp"],
+    "description": "microCMSを使用したブログサイトです。\n主に技術関係の記事をあげています。\n Next.jsのSSGを使用することで、build時に必要なHTMLを事前準備するため、ページの表示速度が速くなっています。\nまた、microCMSを使用して、ブログの記事データなどを管理しています。",
+    "features": ["タグ絞り込み機能"],
+    "skills": ["Next.js（TypeScript）", "microCMS", "TailwindCSS"],
+    "githubSrc": "https://github.com/ryota-sb/code-atelier"
+  },
+  {
+    "id": 2,
+    "title": "Ally",
+    "subTitle": "ゲームマッチングアプリ",
+    "image": "/images/woman.webp",
+    "description": "ゲームを一緒にプレイする友達を探すアプリです。フロントエンドはNext.jsで、バックエンドはRuby on RailsのAPIモードを採用しています。",
+    "features": [
+      "ログイン機能",
+      "ユーザー登録",
+      "マッチング機能",
+      "チャット機能"
+    ],
+    "skills": ["Next.js", "Ruby on Rails", "Docker"],
+    "githubSrc": ""
+  },
+  {
+    "id": 3,
+    "title": "Spotify GP",
+    "subTitle": "",
+    "image": "/images/woman.webp",
+    "description": "詳細3",
+    "features": ["セッション認証"],
+    "skills": ["T3 Stack", "Neon"],
+    "githubSrc": ""
+  }
+]
