@@ -29,32 +29,46 @@ const Products: NextPage = () => {
           </h1>
           <div className="grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2 lg:gap-20">
             {data.map((product, index) => (
-              <Link key={index} href={`/products/${product.id}`}>
-                <div
-                  className={cn(
-                    "aspect-w-16 aspect-h-9 overflow-hidden bg-gray-200 opacity-80 duration-700 ease-in-out group-hover:opacity-40",
-                    isLoading
-                      ? "scale-100 blur-2xl grayscale"
-                      : "scale-100 blur-0 grayscale-0"
-                  )}
-                >
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="object-cover"
-                    onLoadingComplete={() => setLoading(false)}
-                  />
-                  <div className="fadein-bottom z-10 flex flex-col items-center justify-center text-black backdrop-blur-sm">
-                    <h1
-                      className={`${roboto.className} p-2 text-2xl text-opacity-100`}
-                    >
-                      {product.title}
-                    </h1>
-                    <p>{product.subTitle}</p>
+              <div key={index}>
+                <Link href={`/products/${product.id}`}>
+                  <div
+                    className={cn(
+                      "aspect-w-16 aspect-h-9 overflow-hidden bg-gray-200 opacity-80 duration-700 ease-in-out",
+                      isLoading
+                        ? "scale-100 blur-2xl grayscale"
+                        : "scale-100 blur-0 grayscale-0"
+                    )}
+                  >
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      className="object-cover"
+                      onLoadingComplete={() => setLoading(false)}
+                    />
+
+                    {/* PC size */}
+                    <div className="fadein-bottom hidden flex-col items-center justify-center text-black backdrop-blur-sm md:flex">
+                      <h1
+                        className={`${roboto.className} p-2 text-2xl text-opacity-100`}
+                      >
+                        {product.title}
+                      </h1>
+                      <p>{product.subTitle}</p>
+                    </div>
                   </div>
+                </Link>
+
+                {/* // Mobile size */}
+                <div className="mt-4 md:hidden">
+                  <h1
+                    className={`${roboto.className} text-2xl text-opacity-100`}
+                  >
+                    {product.title}
+                  </h1>
+                  <p>{product.subTitle}</p>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </section>
