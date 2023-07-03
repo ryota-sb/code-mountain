@@ -47,5 +47,16 @@
     "features": ["セッション認証", "BPM調整機能"],
     "skills": ["T3 Stack", "Neon", "Spotify API"],
     "githubSrc": "https://github.com/ryota-sb/spotify-mixer"
+  },
+  {
+    "id": 4,
+    "title": "Fargate Env",
+    "subTitle": "AWS Fargate 環境構築",
+    "image": "/images/products/fargate_env/fargate_env.png",
+    "images": ["/images/products/fargate_env/fargate_env.png"],
+    "description": "PHPで作成されたAPIを動かすための環境をFargateで作成しました。\nまた、環境をコードで管理できるようにTerraformを使用しました。",
+    "features": [],
+    "skills": ["AWS ECS(Fargate)", "Terraform"],
+    "githubSrc": "https://github.com/ryota-sb/php-api-fargate-env"
   }
 ]
