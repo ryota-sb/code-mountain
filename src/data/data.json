@@ -3,8 +3,11 @@
     "id": 1,
     "title": "Code Atelier",
     "subTitle": "技術ブログサイト",
-    "image": "/images/products/code_atelier.png",
-    "images": ["/images/products/code_atelier.png", "/images/woman.webp"],
+    "image": "/images/products/code_atelier/code_atelier.png",
+    "images": [
+      "/images/products/code_atelier/code_atelier.png",
+      "/images/products/code_atelier/code_atelier_article.png"
+    ],
     "description": "microCMSを使用したブログサイトです。\n主に技術関係の記事をあげています。\n Next.jsのSSGを使用することで、build時に必要なHTMLを事前準備するため、ページの表示速度が速くなっています。\nまた、microCMSを使用して、ブログの記事データなどを管理しています。",
     "features": ["タグ絞り込み機能"],
     "skills": ["Next.js（TypeScript）", "microCMS", "TailwindCSS"],
@@ -14,9 +17,14 @@
     "id": 2,
     "title": "Ally",
     "subTitle": "ゲームマッチングアプリ",
-    "image": "/images/woman.webp",
-    "images": ["/images/products/code_atelier.png", "/images/woman.webp"],
-    "description": "ゲームを一緒にプレイする友達を探すアプリです。フロントエンドはNext.jsで、バックエンドはRuby on RailsのAPIモードを採用しています。",
+    "image": "/images/products/ally/ally_users.png",
+    "images": [
+      "/images/products/ally/ally_users.png",
+      "/images/products/ally/ally_chat_rooms.png",
+      "/images/products/ally/ally_chat_messages.png",
+      "/images/products/ally/db_er.png"
+    ],
+    "description": "ゲームを一緒にプレイする友達を探すアプリです。フロントエンドはNext.jsで、バックエンドはRuby on RailsのAPIモードを採用しています。未完成です。",
     "features": [
       "ログイン機能",
       "ユーザー登録",
@@ -24,17 +32,20 @@
       "チャット機能"
     ],
     "skills": ["Next.js", "Ruby on Rails", "Docker"],
-    "githubSrc": ""
+    "githubSrc": "https://github.com/ryota-sb/ally"
   },
   {
     "id": 3,
-    "title": "Spotify GP",
-    "subTitle": "",
-    "image": "/images/woman.webp",
-    "images": ["/images/products/code_atelier.png", "/images/woman.webp"],
-    "description": "詳細3",
-    "features": ["セッション認証"],
-    "skills": ["T3 Stack", "Neon"],
-    "githubSrc": ""
+    "title": "Spotify Mixer",
+    "subTitle": "BPMを調整したプレイリスト再生成",
+    "image": "/images/products/spotify_mixer/spotify_mixer_playlist.png",
+    "images": [
+      "/images/products/spotify_mixer/spotify_mixer_playlist.png",
+      "/images/products/spotify_mixer/spotify_mixer_track.png"
+    ],
+    "description": "Spotifyのプレイリストをミックスし、BPMを調整してプレイリストを再生成するアプリです。\nシーンによって曲の速さを統一したいと思い作成しました。",
+    "features": ["セッション認証", "BPM調整機能"],
+    "skills": ["T3 Stack", "Neon", "Spotify API"],
+    "githubSrc": "https://github.com/ryota-sb/spotify-mixer"
   }
 ]
