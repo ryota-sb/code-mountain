@@ -65,7 +65,16 @@ const Product: NextPage<Props> = ({ product }: Props) => {
             {product.title}
           </h1>
           <div className="mb-4 flex items-center justify-between">
-            <h2>{product.subTitle}</h2>
+            <h2 className="text-sm md:text-lg">{product.subTitle}</h2>
+            <motion.button
+              whileHover={{ scale: 0.8 }}
+              whileTap={{ scale: 0.8 }}
+              className="text-sm md:text-lg"
+            >
+              <a href={product.url} target="_blank" rel="noopener noreferrer">
+                {product.url}
+              </a>
+            </motion.button>
             <motion.button
               whileHover={{ scale: 0.8 }}
               whileTap={{ scale: 0.8 }}

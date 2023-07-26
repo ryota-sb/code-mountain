@@ -11,7 +11,8 @@
     "description": "microCMSを使用したブログサイトです。\n主に技術関係の記事をあげています。\n Next.jsのSSGを使用することで、build時に必要なHTMLを事前準備するため、ページの表示速度が速くなっています。\nまた、microCMSを使用して、ブログの記事データなどを管理しています。",
     "features": ["タグ絞り込み機能"],
     "skills": ["Next.js（TypeScript）", "microCMS", "TailwindCSS"],
-    "githubSrc": "https://github.com/ryota-sb/code-atelier"
+    "githubSrc": "https://github.com/ryota-sb/code-atelier",
+    "url": "https://code-atelier.vercel.app"
   },
   {
     "id": 2,
@@ -32,7 +33,8 @@
       "チャット機能"
     ],
     "skills": ["Next.js", "Ruby on Rails", "Docker"],
-    "githubSrc": "https://github.com/ryota-sb/ally"
+    "githubSrc": "https://github.com/ryota-sb/ally",
+    "url": "https://ally-two.vercel.app"
   },
   {
     "id": 3,
@@ -46,7 +48,8 @@
     "description": "Spotifyのプレイリストをミックスし、BPMを調整してプレイリストを再生成するアプリです。\nシーンによって曲の速さを統一したいと思い作成しました。",
     "features": ["セッション認証", "BPM調整機能"],
     "skills": ["T3 Stack", "Neon", "Spotify API"],
-    "githubSrc": "https://github.com/ryota-sb/spotify-mixer"
+    "githubSrc": "https://github.com/ryota-sb/spotify-mixer",
+    "url": "https://spotify-mixer-ten.vercel.app"
   },
   {
     "id": 4,
@@ -57,6 +60,7 @@
     "description": "PHPで作成されたAPIを動かすための環境をFargateで作成しました。\nまた、環境をコードで管理できるようにTerraformを使用しました。",
     "features": [],
     "skills": ["AWS ECS(Fargate)", "Terraform"],
-    "githubSrc": "https://github.com/ryota-sb/php-api-fargate-env"
+    "githubSrc": "https://github.com/ryota-sb/php-api-fargate-env",
+    "url": "https://github.com/ryota-sb/php-api-fargate-env"
   }
 ]
