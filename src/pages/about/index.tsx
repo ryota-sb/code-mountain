@@ -46,9 +46,10 @@ const About: NextPage = () => {
 
             <div className="fadein-top flex flex-col gap-6 text-center md:text-start">
               <h2 className="text-3xl md:text-4xl">松井 亮太</h2>
-              <p>1994年12月6日生まれ</p>
-              <p>静岡県浜松市在住</p>
-              <p>趣味は、スノーボード、プログラミング、ゲームなどです。</p>
+              <p>生年月日: 1994年12月6日生まれ</p>
+              <p>出身地: 静岡県</p>
+              <p>現住: 東京都</p>
+              <p>趣味: スノーボード、プログラミング、ゲーム</p>
             </div>
           </div>
           <div className="flex justify-center md:justify-start">
