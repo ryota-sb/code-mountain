@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="relative flex items-center justify-between p-8">
-      <h1 className="text-xl md:text-2xl lg:text-3xl">Code Mountain</h1>
+      <h1 className="text-xl md:text-2xl lg:text-3xl">Alpine Code</h1>
 
       {/* PC size */}
       <nav className="hidden gap-10 text-xl md:flex lg:gap-16">

@@ -12,7 +12,7 @@ const TypingAnimation: React.FC = () => {
         <h1 className="mb-2 text-5xl md:text-7xl">
           Welcome to&ensp;
           <br className="md:hidden" />
-          Code Mountain.
+          Alpine Code.
         </h1>
         <div className="flex text-2xl">
           <h2>
